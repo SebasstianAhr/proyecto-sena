@@ -1,16 +1,10 @@
 import Layouts from "../layouts/Layouts";
+import Grafics from "../components/componentsStatistics/Grafics";
 const HomePage = () => {
   return (
     <Layouts>
       <div className="home">
-        <h1></h1>
-        <div className="content-grafics-home"></div>
-        <div className="content-general-home">
-          <div className="content-components-home"></div>
-          <div className="content-components-home"></div>
-          <div className="content-components-home"></div>
-          <div className="content-components-home"></div>
-        </div>
+        <Grafics tittle="Estadisticas" />
       </div>
     </Layouts>
   );
