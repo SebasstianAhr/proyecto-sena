@@ -1,5 +1,5 @@
 const Name = ({ name }) => {
-  return <h1 className="class-name-from-components-nav">{name}</h1>;
+  return <h1 className="from-components-nav">{name}</h1>;
 };
 
 export default Name;
