@@ -284,11 +284,10 @@
 }
 
 .nitification-navbar:hover {
-  background-color: #313a46;
+  background-color: #b6b6b6;
   transition: 0.8s;
   padding: 0.3rem;
   border-radius: 50px;
-  color: #fff;
 }
 
 /*=====================================
@@ -391,7 +390,23 @@ thead {
 }
 
 tr:hover td {
-  background-color: #8a929dab;
-  color: #fff;
+  background-color: #8a929d59;
+
   transition: 0.3s;
+}
+
+.color-active-workers {
+  background-color: #31c953;
+  padding: 0.8rem 1.2rem;
+  border-radius: 15px;
+}
+
+.color-inactive-workers {
+  background-color: #fb0a0a;
+  padding: 0.8rem 1.2rem;
+  border-radius: 15px;
+}
+
+.general-icons-tables-workers {
+  font-size: 1.8rem;
 }

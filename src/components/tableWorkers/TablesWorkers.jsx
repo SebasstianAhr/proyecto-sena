@@ -1,4 +1,5 @@
-import { FaCheckCircle } from "react-icons/fa";
+import Worker from "./Worker";
+
 const TablesWorkers = () => {
   return (
     <div className="container-tables">
@@ -12,42 +13,9 @@ const TablesWorkers = () => {
           </tr>
         </thead>
 
-        <tr>
-          <td>JUAN PASTAS VALENCIA</td>
-          <td>jcpastas@dayrep.com</td>
-          <td>Juan12345</td>
-          <td>Activo</td>
-          <td>
-            <FaCheckCircle />
-          </td>
-          <td>
-            <FaCheckCircle />
-          </td>
-        </tr>
-        <tr>
-          <td>JUAN ANDRES CASTAÑO</td>
-          <td>jacastaño@dayrep.com</td>
-          <td>JuanAndres12345</td>
-          <td>Inactivo</td>
-          <td>
-            <FaCheckCircle />
-          </td>
-          <td>
-            <FaCheckCircle />
-          </td>
-        </tr>
-        <tr>
-          <td>DANIEL CAMILO PALADINES</td>
-          <td>dapaladinez@dayrep.com</td>
-          <td>Daniel12345</td>
-          <td>Activo</td>
-          <td>
-            <FaCheckCircle />
-          </td>
-          <td>
-            <FaCheckCircle />
-          </td>
-        </tr>
+        <div>
+          <Worker />
+        </div>
       </table>
     </div>
   );
