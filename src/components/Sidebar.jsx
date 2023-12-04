@@ -4,11 +4,8 @@ import Button from "./componentsSidebar/Button";
 import { Link } from "react-router-dom";
 
 /*iconos*/
-import { FaHome, FaUsersCog, FaFileArchive } from "react-icons/fa";
-import { BsGraphUp } from "react-icons/bs";
-import { PiPlantFill } from "react-icons/pi";
-import { MdGroups } from "react-icons/md";
-import { GiGears } from "react-icons/gi";
+
+import { faChartLine, faFolderClosed, faGears, faHome, faPlantWilt, faUser, faUsers } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = () => {
   return (
@@ -25,37 +22,37 @@ const Sidebar = () => {
       <div className="components-sidebar">
         <div className="icons-sidebar">
           <Link className="icons-sidebar-link" to="/">
-            <Icon icon={<FaHome />} name="Inicio" />
+           <Icon icon={faHome} name={"home"}/>
           </Link>
         </div>
         <div className="icon-sidebar">
           <Link className="icons-sidebar-link" to="/workers">
-            <Icon icon={<FaUsersCog />} name="Operarios" />
+            <Icon icon={faUser} name="Operarios" />
           </Link>
         </div>
         <div className="icon-sidebar">
           <Link className="icons-sidebar-link" to="/statistics">
-            <Icon icon={<BsGraphUp />} name="Estadisticas" />
+            <Icon icon={faChartLine} name="Estadisticas" />
           </Link>
         </div>
         <div className="icon-sidebar">
           <Link className="icons-sidebar-link" to="/archives">
-            <Icon icon={<FaFileArchive />} name="Archivos" />
+            <Icon icon={faFolderClosed} name="Archivos" />
           </Link>
         </div>
         <div className="icon-sidebar">
           <Link className="icons-sidebar-link" to="/processes">
-            <Icon icon={<PiPlantFill />} name="Procesos" />
+            <Icon icon={faPlantWilt} name="Procesos" />
           </Link>
         </div>
         <div className="icon-sidebar">
           <Link className="icons-sidebar-link" to="/suppliers">
-            <Icon icon={<MdGroups />} name="Proveedores" />
+            <Icon icon={faUsers} name="Proveedores" />
           </Link>
         </div>
         <div className="icon-sidebar">
           <Link className="icons-sidebar-link" to="/machines">
-            <Icon icon={<GiGears />} name="Maquinas" />
+            <Icon icon={faGears} name="Maquinas" />
           </Link>
         </div>
       </div>

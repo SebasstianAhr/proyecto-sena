@@ -1,4 +1,5 @@
-import { IoMdNotifications } from "react-icons/io";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBell } from "@fortawesome/free-solid-svg-icons";
 
 /*import de el componente nombre*/
 import Name from "./componentsNavbar/Name";
@@ -12,7 +13,7 @@ const Nav = () => {
       </div>
       <div className="section-notification-profile-navbar">
         <div className="nitification-navbar">
-          <IoMdNotifications />
+        <FontAwesomeIcon icon={faBell} />
         </div>
         <div className="profile-navbar">
           <Profile />

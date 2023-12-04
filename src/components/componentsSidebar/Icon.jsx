@@ -1,7 +1,9 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Icon = ({ icon, name }) => {
   return (
     <div className="icon-component-sidebar">
-      {icon}
+      <FontAwesomeIcon icon={icon}/>
       <p>{name}</p>
     </div>
   );

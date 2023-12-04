@@ -1,6 +1,6 @@
 import imgLogo from "../../public/logo-indestec.svg";
-import { IoPersonSharp } from "react-icons/io5";
-import { RiLockPasswordFill } from "react-icons/ri";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLock, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
 
 const FormLogin = () => {
@@ -25,7 +25,7 @@ const FormLogin = () => {
 
           <div className="cont-icon-input-form">
             <span>
-              <IoPersonSharp />
+            <FontAwesomeIcon icon={faUser} />
             </span>
 
             <input
@@ -54,7 +54,7 @@ const FormLogin = () => {
 
           <div className="cont-icon-input-form">
             <span>
-              <RiLockPasswordFill />
+              <FontAwesomeIcon icon={faLock} />
             </span>
 
             <input

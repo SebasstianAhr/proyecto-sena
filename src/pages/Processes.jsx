@@ -1,10 +1,11 @@
 import Layouts from "../layouts/Layouts";
+import TableProcesses from "../components/tableProcesses/tableProcesses";
 
 const Processes = () => {
   return (
     <Layouts>
       <div>
-        <h1>procesos</h1>
+        <TableProcesses />
       </div>
     </Layouts>
   );

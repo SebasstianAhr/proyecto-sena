@@ -1,32 +1,48 @@
-import { useContext } from "react";
-import { globalContext } from "../context/globalContext";
-import { FcInfo, FcCancel } from "react-icons/fc";
+import { useContext, useState } from "react";
+import { globalContext } from "../contextWorkers/globalContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faToggleOn,
+  faToggleOff,
+  faBan,
+  faCircleInfo,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Worker = () => {
-  const { name, setName } = useContext(globalContext);
-  const { password, setPassword } = useContext(globalContext);
+  const { name, correo, idusuario } = useContext(globalContext);
+  const [workerState, setWorkerState] = useState(false);
+
+  const changeWorkerStateActive = () => setWorkerState(true);
+  const changeWorkerStateInactive = () => setWorkerState(false);
 
   return (
-    <div>
-      <tr>
-        <td>{name}</td>
-        <td>{password}</td>
-        <td>Juan12345</td>
-        <td>
-          <span className="color-active-workers"> Activo</span>
-        </td>
-        <td>
-          <span className="general-icons-tables-workers">
-            <FcCancel />
-          </span>
-        </td>
-        <td>
-          <span className="general-icons-tables-workers">
-            <FcInfo />
-          </span>
-        </td>
-      </tr>
-    </div>
+    <tr>
+      <td>{name}</td>
+      <td>{correo}</td>
+      <td>{idusuario}</td>
+      <td>
+        <span
+          onClick={
+            workerState ? changeWorkerStateInactive : changeWorkerStateActive
+          }
+          className={
+            workerState ? "color-active-workers" : "color-inactive-workers"
+          }
+        >
+          {workerState ? "Activo" : "Inactivo"}
+        </span>
+      </td>
+      <td className="icon-table-center">
+        <span className="general-icons-tables-workers general-icons-tables-workers-info">
+          <FontAwesomeIcon icon={faCircleInfo} />
+        </span>
+      </td>
+      <td className="icon-table-center">
+        <span className="general-icons-tables-workers general-icons-tables-workers-switch">
+          <FontAwesomeIcon icon={faBan} />
+        </span>
+      </td>
+    </tr>
   );
 };
 

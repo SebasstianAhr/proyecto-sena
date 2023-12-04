@@ -1,10 +1,11 @@
 import Layouts from "../layouts/Layouts";
+import TablesWorkers from "../components/tableWorkers/TablesWorkers";
 
 const Suppliers = () => {
   return (
     <Layouts>
       <div>
-        <h1>proveedores</h1>
+        <TablesWorkers />
       </div>
     </Layouts>
   );

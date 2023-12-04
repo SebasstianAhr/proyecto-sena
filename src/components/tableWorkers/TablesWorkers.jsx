@@ -7,15 +7,16 @@ const TablesWorkers = () => {
         <thead>
           <tr>
             <th>NOMBRE</th>
+            <th>CORREO</th>
             <th>ID USUARIO</th>
-            <th>CONTRASEÑA</th>
             <th>ESTADO</th>
           </tr>
         </thead>
-
-        <div>
+        <tbody>
           <Worker />
-        </div>
+          <Worker />
+          <Worker />
+        </tbody>
       </table>
     </div>
   );

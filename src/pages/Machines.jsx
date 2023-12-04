@@ -1,10 +1,11 @@
+import TableMachine from "../components/tableMachine/TableMachine";
 import Layouts from "../layouts/Layouts";
 
 const Machines = () => {
   return (
     <Layouts>
       <div>
-        <h1>maquinas</h1>
+        <TableMachine />
       </div>
     </Layouts>
   );

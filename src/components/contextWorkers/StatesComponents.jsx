@@ -3,10 +3,11 @@ import { useState } from "react";
 
 const StatesComponents = ({ children }) => {
   const [name, setName] = useState("sebasstian Ahr");
-  const [password, setPassword] = useState("jcpastas@dayrep.com");
+  const [correo, setCorreo] = useState("jcpastas@dayrep.com");
+  const [idusuario, setIdusuario] = useState("sebas117");
 
   return (
-    <globalContext.Provider value={{ name, setName, password, setPassword }}>
+    <globalContext.Provider value={{ name, correo, idusuario }}>
       {children}
     </globalContext.Provider>
   );
