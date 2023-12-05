@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { globalContext } from "../contextWorkers/globalContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faToggleOn,
   faToggleOff,

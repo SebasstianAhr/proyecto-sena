@@ -2,8 +2,10 @@ import imgLogo from "../../public/logo-indestec.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react";
 
 const FormLogin = () => {
+  const navigate = useNavigate();
   const {
     handleSubmit,
     register,
@@ -25,7 +27,7 @@ const FormLogin = () => {
 
           <div className="cont-icon-input-form">
             <span>
-            <FontAwesomeIcon icon={faUser} />
+              <FontAwesomeIcon icon={faUser} />
             </span>
 
             <input

@@ -1,6 +1,7 @@
 import Layouts from "../layouts/Layouts";
 import Grafics from "../components/componentsStatistics/Grafics";
 import Card_inicio from "../components/componentsHome/componentes/card_inicio";
+import ProcessesHome from "../components/componentProcesses/ProcessesHome";
 
 import { Link } from "react-router-dom";
 const HomePage = () => {
@@ -53,7 +54,9 @@ const HomePage = () => {
       </div>
       <div className="container-statistic container-home">
         <div className="content-statistics ">
-          <Grafics tittle="Ultimo proceso: 03/JUL/2023" />
+          <Link className="link-home-style" to="/processes">
+            <ProcessesHome tittle="Procesos" />
+          </Link>
         </div>
         <div className="content-statistics">
           <Link className="link-home-style" to="/suppliers">

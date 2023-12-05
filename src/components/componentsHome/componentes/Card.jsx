@@ -1,14 +1,11 @@
 import React from "react";
 import "../hojas-de-estilo/card.css";
+import img from "../imagenes/usuario-1.png";
 
 function Card(props) {
   return (
     <div className="contenedor-card">
-      <img
-        className="foto"
-        src={require(`../imagenes/usuario-${props.imagen}.png`)}
-        alt="Foto"
-      />
+      <img className="foto" src={img} alt="Foto" />
       <div className="contenedor-atrubutos-card">
         <p className="nombre-card">
           <strong>NOMBRE: </strong>

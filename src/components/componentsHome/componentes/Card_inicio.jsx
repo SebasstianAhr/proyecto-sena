@@ -5,7 +5,7 @@ function Card_inicio(props) {
   return (
     <div className="contenedor-card-inicio">
       <div className="titulo-card">
-        <strong> {props.titulo} </strong>
+        <p className="titulo-card-component">{props.titulo}</p>
       </div>
       <div className="imagen-texto-color-icono">
         <div className="foto-inicio">
