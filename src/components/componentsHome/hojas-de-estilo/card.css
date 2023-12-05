@@ -1,0 +1,44 @@
+.contenedor-card {
+  width: 450px;
+  height: 480px;
+  margin: 10px 10px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8391A2; 
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 3%;
+}
+
+.foto {
+  height: 50%;
+  width: auto;
+  border: rgb(255, 255, 255) 5px outset;
+ 
+  border-radius: 50%;
+}
+
+.contenedor-atrubutos-card {
+  text-align: start;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.nombre-card {
+  font-size: 1.1rem;
+}
+
+.cargo-card {
+  font-size: 1.1rem;
+  
+}
+
+.id-card {
+  font-size: 1.1rem;
+ 
+}
+
+
