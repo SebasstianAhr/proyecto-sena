@@ -1,49 +1,59 @@
 import { useContext, useState } from "react";
-import { globalContext } from "../contextWorkers/globalContext";
+import { globalContext } from "../context/globalContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faToggleOn, faToggleOff, faBan, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
-import {
-  faToggleOn,
-  faToggleOff,
-  faBan,
-  faCircleInfo,
-} from "@fortawesome/free-solid-svg-icons";
 
 const Worker = () => {
-  const { name, correo, idusuario } = useContext(globalContext);
-  const [workerState, setWorkerState] = useState(false);
+  const {nameWorker, correoWorker, idusuarioWorker, setShow,show} = useContext(globalContext);
+  const [workerState, setWorkerState] = useState(false)
 
-  const changeWorkerStateActive = () => setWorkerState(true);
-  const changeWorkerStateInactive = () => setWorkerState(false);
+   
+
+   const changeWorkerStateActive = () => setWorkerState(true);
+   const changeWorkerStateInactive = () => setWorkerState(false);
+
+
+   
+
+   const handleClick = () =>{
+      setShow(true)
+      console.log(show);
+   }
 
   return (
+
+    
+    
+    
+  
+
     <tr>
-      <td>{name}</td>
-      <td>{correo}</td>
-      <td>{idusuario}</td>
+
+  
+
+      <td>{nameWorker}</td>
+      <td>{correoWorker}</td>
+      <td>{idusuarioWorker}</td>
       <td>
-        <span
-          onClick={
-            workerState ? changeWorkerStateInactive : changeWorkerStateActive
-          }
-          className={
-            workerState ? "color-active-workers" : "color-inactive-workers"
-          }
-        >
-          {workerState ? "Activo" : "Inactivo"}
+        <span onClick={workerState ? changeWorkerStateInactive :changeWorkerStateActive} className={ workerState ? "color-active-workers" :"color-inactive-workers"}>{workerState ? 'Activo' : 'Activar'}</span>
+      </td>
+      <td>
+        <span className="general-icons-tables-workers">
+          <FontAwesomeIcon icon={faBan}/>
         </span>
       </td>
-      <td className="icon-table-center">
-        <span className="general-icons-tables-workers general-icons-tables-workers-info">
-          <FontAwesomeIcon icon={faCircleInfo} />
-        </span>
-      </td>
-      <td className="icon-table-center">
-        <span className="general-icons-tables-workers general-icons-tables-workers-switch">
-          <FontAwesomeIcon icon={faBan} />
+      <td>
+        <span className="general-icons-tables-workers-info"
+           >
+          <FontAwesomeIcon icon={faCircleInfo}
+            onClick={handleClick}
+          />
         </span>
       </td>
     </tr>
+    
+    
   );
 };
 

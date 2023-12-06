@@ -382,6 +382,8 @@ thead {
   border-bottom: 3px solid #f2f2f2;
 }
 
+
+
 tr:hover td {
   background-color: #8a929d59;
 
@@ -411,6 +413,7 @@ tr:hover td {
 
 .general-icons-tables-workers-info {
   color: #00b3ff;
+  cursor: pointer;
 }
 
 /* estilos para centrar los iconos en las tablas*/

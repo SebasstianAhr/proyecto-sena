@@ -1,8 +1,17 @@
+import { useContext } from "react";
+import Card from "../componentsHome/componentes/Card";
 import Worker from "./Worker";
+import { globalContext } from "../context/globalContext";
 
 const TablesWorkers = () => {
+
+  const {show} = useContext(globalContext)
+
   return (
     <div className="container-tables">
+      
+      {show?<Card/>:""}
+
       <table>
         <thead>
           <tr>

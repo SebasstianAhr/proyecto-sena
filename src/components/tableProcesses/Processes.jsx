@@ -1,14 +1,14 @@
 import { useContext, useState } from "react";
-import { globalComponentProcesses } from "../contextProcess/globalComponentProcesses";
+import { globalContext } from "../context/globalContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrash } from "@fortawesome/free-solid-svg-icons";
 const Processes = () => {
-  const { nameProcess, state } = useContext(globalComponentProcesses);
+  const { nameProcess, stateProcess } = useContext(globalContext);
 
   return (
     <tr>
       <td>{nameProcess}</td>
-      <td>{state}</td>
+      <td>{stateProcess}</td>
       <td className="action-icon-from-processes icon-table-center">
         <span>
           <FontAwesomeIcon icon={faPenToSquare} />

@@ -1,17 +1,17 @@
 import { useContext, useState } from "react";
-import { globalContextArchives } from "../contextArchives/globalcontextArchives";
+import { globalContext } from "../context/globalContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const PersonArchive = () => {
-  const { name, date, process, machine } = useContext(globalContextArchives);
+  const { nameArchives, dateArchives, processArchives, machineArchives } = useContext(globalContext);
 
   return (
     <tr>
-      <td>{name}</td>
-      <td>{date}</td>
-      <td>{process}</td>
-      <td>{machine}</td>
+      <td>{nameArchives}</td>
+      <td>{dateArchives}</td>
+      <td>{processArchives}</td>
+      <td>{machineArchives}</td>
       <td className="icon-table-center">
         <span>
           <FontAwesomeIcon icon={faDownload} />

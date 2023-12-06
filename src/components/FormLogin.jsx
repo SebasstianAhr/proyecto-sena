@@ -2,7 +2,7 @@ import imgLogo from "../../public/logo-indestec.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLock, faUser } from "@fortawesome/free-solid-svg-icons";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react";
+import { useNavigate } from "react-router-dom";
 
 const FormLogin = () => {
   const navigate = useNavigate();
@@ -14,6 +14,7 @@ const FormLogin = () => {
 
   const clickBotonIniciar = handleSubmit((data) => {
     console.log(data);
+    navigate("/")
   });
 
   return (
